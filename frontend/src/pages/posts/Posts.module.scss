@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+.feedContainer {
+  min-width: 800px;
+  height: 860px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding-bottom: 60px;
+}
+
+.post_card {
+  background-color: $post-bg;
+  width: 745px;
+  height: auto;
+  border-radius: 30px;
+  padding-left: 30px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-bottom: 15px;
+
+  .post_title {
+    font-size: 50px;
+    font-weight: 800;
+    color: $text-dark;
+    padding-bottom: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .post_content {
+    font-size: 20px;
+    color: $text-lighter;
+    padding-bottom: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .post_author {
+    font-size: 22px;
+    color: $text-dark;
+    font-weight: 600;
+    margin-bottom: 20px;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  .post_likes_dislikes {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    .like_dislike {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 600;
+      color: $text-dark;
+      span {
+        &:hover {
+          cursor: pointer;
+          scale: 1.1;
+        }
+      }
+    }
+  }
+}

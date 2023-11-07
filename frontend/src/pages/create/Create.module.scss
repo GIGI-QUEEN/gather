@@ -1,0 +1,203 @@
+@import '../../styles/variables.scss';
+
+.create_form_container {
+  height: 500px;
+  width: 500px;
+
+  .title_input {
+    height: 37px;
+    margin-bottom: 30px;
+    input {
+      outline: none;
+      width: 500px;
+      border: none;
+      background-color: $content-bg;
+      border-bottom: 1px solid $text-dark;
+      font-size: 36px;
+      font-weight: 700;
+      font-family: $montserrat-font;
+      color: $text-dark;
+      &::placeholder {
+        color: rgba(77, 106, 101, 0.45);
+      }
+    }
+  }
+  .image_section {
+    .post_image {
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .categories_image_form,
+  .post_privacy {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 30px;
+    label {
+      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $montserrat-font;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      text-align: center;
+      font-weight: 600;
+      width: 155px;
+      height: 30px;
+      color: $text-dark;
+      background-color: $main-bg;
+      svg {
+        margin-left: 10px;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: $text-lighter;
+        color: white;
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+    input {
+      display: none;
+      visibility: none;
+    }
+    select {
+      background-color: $main-bg;
+      color: $text-dark;
+      width: 155px;
+      height: 30px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      padding-left: 5px;
+      font-family: $montserrat-font;
+      margin-right: 10px;
+      &:focus {
+        border: 1px solid rgba(0, 0, 0, 0.155);
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    button {
+      background-color: $text-dark;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      height: 25px;
+      width: 40px;
+      text-align: center;
+      border-radius: 10px;
+      &:hover {
+        background-color: $text-lighter;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .bottom_section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .post_privacy {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+
+    select {
+      width: 200px;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      background-color: $main-bg;
+      width: 200px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.155);
+      font-weight: 500;
+      color: $text-dark;
+      padding: 8px 0 0 15px;
+
+      li {
+        margin-bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    .category {
+      background-color: $text-dark;
+      color: white;
+      width: 100px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 18px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .post_content {
+    margin-bottom: 30px;
+    textarea {
+      font-family: $montserrat-font;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      width: 100%;
+      height: 290px;
+      font-size: 20px;
+      background-color: $main-bg;
+      padding-left: 20px;
+      padding-top: 20px;
+      resize: none;
+      &:focus {
+        border: 1px solid rgba(0, 0, 0, 0.155);
+      }
+    }
+  }
+
+  .create_button {
+    button {
+      width: 132px;
+      height: 30px;
+      background-color: $text-dark;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+      border-radius: 10px;
+      &:hover {
+        cursor: pointer;
+        background-color: $text-lighter;
+      }
+    }
+  }
+}

@@ -1,0 +1,265 @@
+@import '../../styles/variables.scss';
+.settings-wrapper {
+  width: 900px;
+  height: 770px;
+  background-color: $content-bg;
+  border-radius: 20px;
+  margin-top: 40px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+  .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .save-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+    .save-changes {
+      background-color: $text-dark;
+      width: 135px;
+      height: 25px;
+      color: white;
+      font-weight: 500;
+      text-align: center;
+      border-radius: 20px;
+      &:disabled {
+        background-color: rgba(102, 102, 102, 0.507);
+        &:hover {
+          background-color: rgb(102, 102, 102, 0.507);
+          cursor: default;
+        }
+      }
+      &:hover {
+        background-color: $text-lighter;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.container {
+  min-width: 165px;
+  background-color: $main-bg;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    color: $text-dark;
+    margin-bottom: 5px;
+  }
+}
+
+.username {
+  width: 475px;
+  height: 90px;
+  color: $text-dark;
+  font-weight: 500;
+  .username_input {
+    display: flex;
+    flex-direction: row;
+    input {
+      background: none;
+      border: none;
+      outline: none;
+      font-family: $montserrat-font;
+      color: $text-dark;
+      font-weight: 500;
+    }
+  }
+  span {
+    text-align: end;
+    color: rgba(0, 0, 0, 0.33);
+    font-weight: 500;
+    padding-right: 15px;
+  }
+  .limit {
+    color: rgba(255, 0, 0, 0.7);
+  }
+}
+
+.about {
+  .limit {
+    color: rgba(255, 0, 0, 0.7);
+  }
+  width: 475px;
+  height: 135px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  textarea {
+    height: 85px;
+    width: 300;
+    background: none;
+    border: none;
+    resize: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-lighter;
+    font-family: $montserrat-font;
+    outline: none;
+  }
+  label {
+    text-align: end;
+    color: rgba(0, 0, 0, 0.33);
+    font-weight: 500;
+  }
+}
+
+.privacy {
+  width: 280px;
+  height: 95px;
+  .toggle-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #d9d9d9;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: white;
+    font-size: 16px;
+    .toggler {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .toggeled {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      height: 30px;
+      background-color: $text-dark;
+      text-align: center;
+      border-radius: 20px;
+    }
+  }
+}
+
+.follow-requests {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  p {
+    color: $text-lighter;
+  }
+  .request-container {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+
+    .name {
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+      color: white;
+      button {
+        background-color: $text-dark;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 0px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          scale: 1.1;
+        }
+      }
+    }
+  }
+}
+
+.users-to-approve {
+  background: none;
+  .user-to-approve {
+    width: 300px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: $main-bg;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 500px;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $text-dark;
+    font-weight: 600;
+    font-size: 24px;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .approve-reject-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    button {
+      width: 115px;
+      height: 35px;
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+      background-color: $text-dark;
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  }
+}
+
+.avatar {
+  background: none;
+  width: 280px;
+  .user-avatar {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    width: 220px;
+    height: 220px;
+    background-color: rgb(211, 210, 210);
+    img {
+      border-radius: 30px;
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+    }
+  }
+  input {
+    &::file-selector-button {
+      font-family: $montserrat-font;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      width: 155px;
+      height: 30px;
+      color: white;
+      background-color: $text-dark;
+      &:hover {
+        cursor: pointer;
+        background-color: $text-lighter;
+        color: white;
+      }
+    }
+  }
+}

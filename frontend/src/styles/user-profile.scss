@@ -1,0 +1,117 @@
+@import '../styles/variables.scss';
+
+.profile-info-container {
+  margin-top: 12px;
+  width: 760px;
+  height: 220px;
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+  .left-section {
+    .user-avatar {
+      width: 220px;
+      height: 220px;
+      img {
+        border-radius: 30px;
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    .stats {
+      font-size: 18px;
+      font-weight: 600;
+      color: $text-dark;
+      margin-bottom: 5px;
+      ul {
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 55px;
+        list-style: none;
+        .stats-link {
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .user-info {
+      min-height: 192px;
+      min-width: 514px;
+      h1 {
+        color: $text-dark;
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 3px;
+      }
+      background-color: $post-bg;
+      border-radius: 10px;
+      padding-left: 17px;
+      padding-top: 17px;
+    }
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 9px;
+      color: $text-lighter;
+    }
+    .about {
+      font-size: 14px;
+    }
+  }
+
+  margin-bottom: 20px;
+}
+
+.users-posts {
+  overflow-y: scroll;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-right: 10px;
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: $sroll-bar-bg;
+    border-radius: 30px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $text-dark;
+    border-radius: 30px;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+  width: 760px;
+  margin-bottom: 20px;
+
+  button {
+    font-weight: 600;
+    background-color: $text-dark;
+    color: white;
+    width: 165px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 18px;
+    &:hover {
+      cursor: pointer;
+      background-color: $text-lighter;
+    }
+  }
+}

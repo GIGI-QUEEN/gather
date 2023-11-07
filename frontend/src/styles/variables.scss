@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+$montserrat-font: 'Montserrat', sans-serif;
+
+//new variables
+
+$great-bg: #c9e4bc;
+$main-bg: #fffcf4;
+$post-bg: rgba(237, 244, 234, 1);
+$sroll-bar-bg: #fff5e4;
+$nav: #86c8bc;
+$text-dark: #3a514d;
+$text-lighter: #4d6a65;
+$text-grey: #969696;
+$content-bg: #fff5e4;
+$light-green: #edf4ea;
+$bg: rgb(255, 255, 255);
+$bg2: rgb(0, 0, 0);
+$text: rgb(15, 15, 15);
+$text2: rgb(240, 240, 240);
+$primary: rgb(220, 20, 60);
+$primary2: #5e091ad5;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+$header-height: 72px;
+$sm: 37.5em;
+$md: 48em;
+$lg: 64em;
+$xl: 75em;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (min-width: $md) {
+      @content;
+    }
+  }
+}

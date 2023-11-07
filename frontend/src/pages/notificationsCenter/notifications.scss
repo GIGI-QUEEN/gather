@@ -1,0 +1,75 @@
+@import '../../styles/variables.scss';
+
+.notifications-container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+  padding-left: 15px;
+  gap: 10px;
+}
+
+.notification-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notification-container {
+  background-color: #edf4ea;
+  height: 50px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  hr {
+    height: 20px;
+    border: 0.5px solid rgba(184, 184, 184, 0.59);
+  }
+  p {
+    color: $text-lighter;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .accept-reject {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img {
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}
+.ntf-type {
+  font-weight: 600;
+  color: $text-dark;
+  margin-right: 5px;
+}
+
+.date {
+  color: rgba(25, 92, 34, 0.753);
+}
+
+.group,
+.user {
+  cursor: pointer;
+  color: $text-dark;
+  font-weight: 700;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.comment {
+  cursor: pointer;
+}
+.clear {
+  cursor: pointer;
+}

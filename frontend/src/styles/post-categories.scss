@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+.post-categories {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 15px;
+    width: 700px;
+}
+
+.category {
+    background-color: $nav;
+    color: white;
+    width: auto;
+    padding: 3px 25px;
+    border-radius: 10px;
+}

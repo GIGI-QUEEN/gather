@@ -1,0 +1,355 @@
+@import './variables.scss';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $montserrat-font;
+  color: $text;
+  background: $great-bg;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.empty-avatar {
+  background-color: rgb(211, 210, 210);
+}
+.chat-list-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.user-profile-avatar {
+  border-radius: 30px;
+  width: 220px;
+  height: 220px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: $sroll-bar-bg;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $text-dark;
+  border-radius: 30px;
+}
+
+.main-container {
+  min-width: 1500px;
+  height: 900px;
+  background-color: $main-bg;
+  border-radius: 30px;
+  display: flex;
+  gap: 140px;
+  overflow: hidden;
+}
+
+.content-container {
+  background-color: $content-bg;
+  height: 900px;
+  width: 920px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.login {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.comments-container {
+  margin-bottom: 25px;
+}
+
+button {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: none;
+  letter-spacing: inherit;
+  color: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  padding: 0;
+}
+
+.attach-and-emojis {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  label {
+    position: relative;
+    cursor: pointer;
+    img {
+      &:hover {
+        scale: 1.1;
+      }
+    }
+    .emoji-picker {
+      position: absolute;
+      scale: 0.8;
+      bottom: 2%;
+    }
+  }
+  input {
+    display: none;
+  }
+}
+
+.image {
+  img {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.available-contact-image {
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.post-image {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px 50px 0px;
+  cursor: pointer;
+  img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.list-avatar {
+  padding-top: 3px;
+  img {
+    height: 39px;
+    width: 39px;
+    border-radius: 20px;
+  }
+}
+
+.comment-image {
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.message-image {
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(70, 64, 64, 0.63);
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: none;
+}
+
+.visible {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-modal-container {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background-color: rgb(255, 255, 255);
+  display: none;
+  z-index: 1;
+  margin-top: 100px;
+  margin-right: 200px;
+  border-radius: 20px;
+  padding: 20px 0px;
+  .title-and-close {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+    input {
+      width: 520px;
+      height: 40px;
+      background-color: $main-bg;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      outline: none;
+      border-radius: 10px;
+      font-size: 22px;
+      padding: 0px 0px 0px 15px;
+      color: rgba(0, 0, 0, 0.6);
+      font-family: $montserrat-font;
+
+      &::placeholder {
+        font-family: $montserrat-font;
+      }
+    }
+    span {
+      background-color: $main-bg;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      cursor: pointer;
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+
+  .event-date-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 20px;
+    input {
+      background-color: $main-bg;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      outline: none;
+      padding: 5px;
+      font-family: $montserrat-font;
+      margin-bottom: 25px;
+    }
+  }
+
+  .wrong-date {
+    input {
+      border: 2px solid red;
+    }
+    p {
+      color: red;
+    }
+  }
+
+  textarea {
+    width: 570px;
+    height: 200px;
+    background-color: $main-bg;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    resize: none;
+    padding: 15px 0px 0px 15px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: $montserrat-font;
+    outline: none;
+    margin-bottom: 20px;
+    &::placeholder {
+      font-family: $montserrat-font;
+    }
+  }
+  .upload-and-create {
+    display: flex;
+    justify-content: space-between;
+    width: 570px;
+    input {
+      display: none;
+    }
+
+    label,
+    button {
+      width: 142px;
+      height: 27px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      background-color: $main-bg;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        scale: 1.1;
+      }
+    }
+    img {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      height: 70px;
+      width: 70px;
+      object-fit: cover;
+    }
+  }
+}
+
+.create-event {
+  height: auto;
+  textarea {
+    height: 100px;
+  }
+  .create-button-container {
+    button {
+      background-color: red;
+    }
+  }
+}
+
+.followers-list-modal-container {
+  position: absolute;
+  display: none;
+  width: auto;
+  height: auto;
+  background-color: $main-bg;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.group-create {
+  display: flex;
+  justify-content: flex-end !important;
+}
+
+.group-post-image {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  z-index: 1;
+}
+
+.back-button {
+  border: 1px solid none;
+  border-radius: 10px;
+  width: 100px;
+  color: white;
+  background-color: $nav;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    scale: 1.1;
+  }
+}

@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+.comment-form {
+  width: 600px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  input {
+    font-family: $montserrat-font;
+    width: 400px;
+    background-color: $content-bg;
+    border: none;
+    border-bottom: 1px solid $text-dark;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+  }
+  button {
+    width: 140px;
+    text-align: center;
+    background-color: $text-dark;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    &:hover {
+      cursor: pointer;
+      background-color: $text-lighter;
+    }
+  }
+}
