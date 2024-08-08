@@ -54,3 +54,11 @@ This project is a further expansion of the project Real Time Forum into a Facebo
 ## License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+<div>
+<img src="./screenshots/screenshot_6.png" style="width:250px;height:auto;">
+<img src="./screenshots/screenshot_7.png" style="width:250px;height:auto;">
+<img src="./screenshots/screenshot_8.png" style="width:250px;height:auto;">
+<img src="./screenshots/screenshot_10.png" style="width:250px;height:auto;">
+<img src="./screenshots/screenshot_11.png" style="width:250px;height:auto;">
+</div>
