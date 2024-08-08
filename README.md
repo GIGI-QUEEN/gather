@@ -59,9 +59,9 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
 ## Screenshots
 
 <div style="display:flex; flex-wrap:wrap; gap: 10px">
-<img src="./screenshots/screenshot_6.png" style="width:250px;height:auto;">
-<img src="./screenshots/screenshot_7.png" style="width:250px;height:auto;">
-<img src="./screenshots/screenshot_8.png" style="width:250px;height:auto;">
-<img src="./screenshots/screenshot_10.png" style="width:250px;height:auto;">
-<img src="./screenshots/screenshot_11.png" style="width:250px;height:auto;">
+<img src="./screenshots/Screenshot_6.png" style="width:250px;height:auto;">
+<img src="./screenshots/Screenshot_7.png" style="width:250px;height:auto;">
+<img src="./screenshots/Screenshot_8.png" style="width:250px;height:auto;">
+<img src="./screenshots/Screenshot_10.png" style="width:250px;height:auto;">
+<img src="./screenshots/Screenshot_11.png" style="width:250px;height:auto;">
 </div>
